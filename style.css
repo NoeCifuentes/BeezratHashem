@@ -1,9 +1,9 @@
 :root {
-  --ink: #F3F4F6;
-  --haze: #c5cfd8;
-  --brass: #c9973f;
-  --display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
-  --text: "Newsreader", Georgia, serif;
+  --bg: #E5E7EB;      /* pleasant grey */
+  --ink: #12202e;     /* dark text */
+  --ink-soft: #3b4a59;/* secondary text */
+  --accent: #a8791f;  /* deep amber line */
+  --font: "Oswald", "Arial Narrow", Impact, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -11,9 +11,9 @@
 html, body { height: 100%; margin: 0; }
 
 body {
-  background: var(--ink);
-  color: #fff;
-  font-family: var(--text);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -37,11 +37,11 @@ body {
 
 h1 {
   margin: 0;
-  font-family: var(--display);
   font-weight: 700;
   font-size: clamp(3.2rem, 12vw, 8rem);
-  line-height: 0.95;
+  line-height: 1;
   letter-spacing: 0.01em;
+  text-transform: uppercase;
 }
 
 .rule {
@@ -49,22 +49,23 @@ h1 {
   width: 4.5rem;
   height: 4px;
   margin: 2rem 0 1.5rem;
-  background: var(--brass);
+  background: var(--accent);
 }
 
 .status {
   margin: 0;
-  font-family: var(--display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(1.2rem, 2.4vw, 1.5rem);
-  letter-spacing: 0.06em;
-  color: var(--haze);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
 }
 
 .credit {
   margin: 0;
   text-align: center;
-  font-style: italic;
+  font-weight: 500;
   font-size: 1rem;
-  color: var(--haze);
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
 }
